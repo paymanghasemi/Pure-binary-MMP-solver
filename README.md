@@ -31,7 +31,7 @@ Compiling the project can be done using the Terminal by going to the directory i
 
 An instance can be solved by typing 
 
-./Algorithm <*address*>/<instance*> <*address*>/<relaxed instance**> <*number of objective*>
+./Algorithm <*address*>/<instance*> <*number of objective*>
 
 where instance* is the original .lp file of the instance, instance** is the relaxed .lp file of the instance.
 
