@@ -1,11 +1,11 @@
 # Pure-binary-MMP-algorithm
-An Algorithm for solving Pure Binary Integer Linear Maximum Multiplicative Programs 
+An Algorithm for solving Pure Binary Linear Maximum Multiplicative Programs 
 
-This is an algorithm to solve a class of Pure Binary Integer Linear Maximum Multiplicative Programs of format:
+This is an algorithm to solve a class of Pure Binary Linear Maximum Multiplicative Programs of format:
 
 ![Images](Images/problem.jpg)
 
-where nc, nb, and ni represent the number of continuous, binary, and integer decision variables, respectively. Also, D is a p * n matrix where n:= nc+ nb + ni, d is a p-vector, A is an m * n matrix, and b is an m-vector.
+where n represents the number of  binary decision variables. Also, D is a p * n matrix, d is a p-vector, A is an m * n matrix, and b is an m-vector.
 
 This project is a Netbeans IDE 8.2 C++ project which was written in Linux (Ubuntu).
 
@@ -21,9 +21,8 @@ For further instances, each data file should be written as a CPLEX LP file as fo
 
 where the first p x's are the objective functions respresenting the y1, y2,..., and yp of the problem, and the rest of x are the decision variables.
 
-Our algorithm is only capable of solving instances without any integer variables. So, in order to implement the algorithm, convert all the integer variables to binaries.
+Our algorithm is only capable of solving instances with only binary variables. So, in order to implement the algorithm on pure integer instances, convert all the integer variables to binaries.
 
-In order to make our algorithm faster, it needs two input files; one is the instance file, and the other is the relaxed format of the instance, that is, the binary constraints should be eliminated in the second file. Binary constraints appear as "Binaries" at the end of the .lp file.
 
 # Compiling and Running
 
@@ -33,18 +32,18 @@ An instance can be solved by typing
 
 ./Algorithm <*address*>/<instance*> <*number of objective*>
 
-where instance* is the original .lp file of the instance, instance** is the relaxed .lp file of the instance.
+where instance* is the original .lp file of the instance.
 
-For better understanging, we have provided a folder named instance in the algorithm folder. In instance folder, 1.lp is the problems original file, and 2.lp is the relaxed form of the problem. In order to solve this instance, one can use the code
+For better understanging, we have provided a folder named Instances in the algorithm folder. In instance folder, 1.lp is the problems original file, which has 4 objective functions. In order to solve this instance, one can use the code
 
 make clean
 
 make
 
-./Algorithm instance/1.lp instance/2.lp 2
+./Algorithm instance/1.lp 4
 
 # Supporting and Citing
 
 The software in this ecosystem was developed as part of academic research. If you would like to help support it, please star the repository as such metrics may help us secure funding in the future. We would be grateful if you could cite:
 
-[Ghasemi Saghand, P., Charkhgard, H., A criterion Space Search Algorithm for Mixed Integer Linear Maximum Multiplicative Programs: A Multi-objective Optimization Approach]
+[Ghasemi Saghand, P., Charkhgard, H., A Criterion Space Search Algorithm for Binary Linear Maximum Multiplicative Programs]
