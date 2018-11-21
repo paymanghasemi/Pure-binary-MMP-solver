@@ -1,0 +1,1 @@
+1.lp GLB= 93500 GUB= 93500 Gap= 0 #VAR= 200 #Const= 200 Time= 4.339061 Open_nodes= 0 Explored_nodes= 5 Infeasible_nodes= 1 Pruned_nodes= 3 Nodes_not_added= 0 #IP= 9
